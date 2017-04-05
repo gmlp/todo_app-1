@@ -11,7 +11,7 @@
         <field name="groups" eval="[(4, ref('base.group_user'))]"/>
         <field name="domain_force">
           ['|',('user_id','in',[user.id,False]),
-               ('message_follower_ids','in',[user.partner_id.id])
+               ('message_follower_ids.partner_id','in',[user.partner_id.id])
           ]
         </field>
     </record>
